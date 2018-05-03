@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to SRS(Oh My Genes)’s documentation! &mdash; SRS(Oh My Genes) 1.0 documentation</title>
+  <title>Software requirements specification (SRS) &mdash; SRS(Oh My Genes) 1.0 documentation</title>
   
 
   
@@ -79,13 +79,49 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Welcome to SRS(Oh My Genes)’s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-<li><a class="reference internal" href="#introduction">1. Introduction</a><ul>
-<li><a class="reference internal" href="#purpose">1.1 Purpose</a><ul>
-<li><a class="reference internal" href="#this-text-descripts-the-application-s-oh-my-genes-request-the-text-will-be-used-by-the-members-of-the-project-developers-who-develop-the-system-function-and-who-test-the-correctness-of-the-system-function">This text descripts the application??s (Oh My Genes) request. The text will be used by the members of the project developers who develop the system function and who test the correctness of the system function.</a></li>
+<li><a class="reference internal" href="#">Software requirements specification (SRS)</a><ul>
+<li><a class="reference internal" href="#preface">Preface</a><ul>
+<li><a class="reference internal" href="#introduction">1. Introduction</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#purpose">1.1 Purpose</a></li>
+<li><a class="reference internal" href="#document-conventions">1.2 Document conventions</a></li>
+<li><a class="reference internal" href="#intended-audience">1.3 Intended audience</a></li>
+<li><a class="reference internal" href="#project-scope">1.4 Project Scope</a></li>
+<li><a class="reference internal" href="#contact-information-srs-team-members">1.5 Contact information/SRS team members</a></li>
+<li><a class="reference internal" href="#references">1.6 References</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#overall-description">2. Overall Description</a><ul>
+<li><a class="reference internal" href="#product-perspective-context-overview">2.1 Product perspective &lt;- context, overview</a></li>
+<li><a class="reference internal" href="#product-functions">2.2 Product functions ***</a></li>
+<li><a class="reference internal" href="#response-time">2.2.4 Response time</a></li>
+<li><a class="reference internal" href="#user-classes-and-characteristics">2.3 User classes and characteristics</a></li>
+<li><a class="reference internal" href="#operating-environment">2.4 Operating environment</a></li>
+<li><a class="reference internal" href="#design-implementation-constraints">2.5Design/implementation constraints ***</a></li>
+<li><a class="reference internal" href="#assumptions-and-dependencies">2.6 Assumptions and dependencies</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#external-interface-requirements">3. External Interface Requirements</a><ul>
+<li><a class="reference internal" href="#hardware-interfaces">3.2 Hardware interfaces</a></li>
+<li><a class="reference internal" href="#software-interfaces">3.3 Software interfaces</a></li>
+<li><a class="reference internal" href="#communication-protocols-and-interfaces">3.4 Communication protocols and interfaces</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#system-features">4. System Features</a><ul>
+<li><a class="reference internal" href="#system-feature-a">4.1 System feature A</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-non-functional-requirements">5. Other Non-functional Requirements</a><ul>
+<li><a class="reference internal" href="#performance-requirements">5.1 Performance requirements</a></li>
+<li><a class="reference internal" href="#safety-requirements">5.2 Safety requirements</a></li>
+<li><a class="reference internal" href="#security-requirements">5.3 Security requirements</a></li>
+<li><a class="reference internal" href="#software-quality-attributes">5.4 Software quality attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-requirements">6. Other Requirements</a><ul>
+<li><a class="reference internal" href="#appendix-a-terminology-glossary-definitions-list">Appendix A: Terminology/Glossary/Definitions list</a></li>
+<li><a class="reference internal" href="#appendix-b-to-be-determined">Appendix B: To be determined</a></li>
 </ul>
 </li>
 </ul>
@@ -133,7 +169,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Welcome to SRS(Oh My Genes)’s documentation!</li>
+      <li>Software requirements specification (SRS)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -152,26 +188,255 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-srs-oh-my-genes-s-documentation">
-<h1>Welcome to SRS(Oh My Genes)’s documentation!<a class="headerlink" href="#welcome-to-srs-oh-my-genes-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-</ul>
-</div>
+  <p>[Last modified on 3 March 2018]</p>
+<div class="section" id="software-requirements-specification-srs">
+<h1>Software requirements specification (SRS)<a class="headerlink" href="#software-requirements-specification-srs" title="Permalink to this headline">¶</a></h1>
+<p>Team name: ZTTZX</p>
+<div class="section" id="preface">
+<h2>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h2>
+<p>This document describes the Little Hill Lab’s initial requirements for an online application (Oh My Genes) which allows our scientists to upload gene expression files and quickly get differentially expressed genes.</p>
 <div class="section" id="introduction">
-<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h3>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 <div class="section" id="purpose">
 <h2>1.1 Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="this-text-descripts-the-application-s-oh-my-genes-request-the-text-will-be-used-by-the-members-of-the-project-developers-who-develop-the-system-function-and-who-test-the-correctness-of-the-system-function">
-<h3>This text descripts the application??s (Oh My Genes) request. The text will be used by the members of the project developers who develop the system function and who test the correctness of the system function.<a class="headerlink" href="#this-text-descripts-the-application-s-oh-my-genes-request-the-text-will-be-used-by-the-members-of-the-project-developers-who-develop-the-system-function-and-who-test-the-correctness-of-the-system-function" title="Permalink to this headline">¶</a></h3>
+<p>This text descripts the application’s (Oh My Genes) request. The text will be used by the members of the project developers who develop the system function and who test the correctness of the system function.</p>
 </div>
+<div class="section" id="document-conventions">
+<h2>1.2 Document conventions<a class="headerlink" href="#document-conventions" title="Permalink to this headline">¶</a></h2>
+<p>In this text, it will use font small 2 and overstriking for primary title, font small 3 for secondary title and font 4 for the content. And it will use the italic when mentions the name of the application Oh My Genes.</p>
+</div>
+<div class="section" id="intended-audience">
+<h2>1.3 Intended audience<a class="headerlink" href="#intended-audience" title="Permalink to this headline">¶</a></h2>
+<p>This SRS about Oh My Genes is for developers, project managers, salesmen, users and testers. The article mainly introduces the overall description, external interface requirements, system features and other non-functional requirements. I suppose the developers and project managers to read the whole article carefully and salesmen pay attention to overall description especially. Users and testers read the system features carefully.</p>
+</div>
+<div class="section" id="project-scope">
+<h2>1.4 Project Scope<a class="headerlink" href="#project-scope" title="Permalink to this headline">¶</a></h2>
+<p>Oh My Genes is used to identify differentially expressed genes given a gene expression file containing two cell samples. And to decrease the workload of a number of repeated calculations, then draw a visual picture to show the result. You can see the detailed content the article about the application GEO2R GEO online analysis tool GEO2R analysis of differential expression genes.</p>
+</div>
+<div class="section" id="contact-information-srs-team-members">
+<h2>1.5 Contact information/SRS team members<a class="headerlink" href="#contact-information-srs-team-members" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>SRS team members: Zhang Tingting (id: 201636900118)</dt>
+<dd>Zhao Xuan (id: 201636900119)</dd>
+</dl>
+</div>
+<div class="section" id="references">
+<h2>1.6 References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>[1]Biological longed for class write the GEO online analysis tool GEO2R analysis of differential expression genes and the address is <a class="reference external" href="http://agetouch.blog.163.com/blog/static/2285350902016101083320329">http://agetouch.blog.163.com/blog/static/2285350902016101083320329</a></p>
+</div>
+</div>
+<div class="section" id="overall-description">
+<h1>2. Overall Description<a class="headerlink" href="#overall-description" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="product-perspective-context-overview">
+<h2>2.1 Product perspective &lt;- context, overview<a class="headerlink" href="#product-perspective-context-overview" title="Permalink to this headline">¶</a></h2>
+<p>A web application preferably using the Flask framework (<a class="reference external" href="http://flask.pocoo.org/">http://flask.pocoo.org/</a>).</p>
+</div>
+<div class="section" id="product-functions">
+<h2>2.2 Product functions <a href="#id1"><span class="problematic" id="id2">**</span></a><a href="#id3"><span class="problematic" id="id4">*</span></a><a class="headerlink" href="#product-functions" title="Permalink to this headline">¶</a></h2>
+<p>Help the users to use this application to grab the information of genes, such as different expressions of the two cells.</p>
+<p>The web application has a simple interface with a single button [Upload and GO].
+Our scientists upload a plain text file containing gene expression levels from two samples, representing two experimental conditions. Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment. If an invalid gene expression is given, the web application returns a page informing the user to provide the correct format.</p>
+<p>A valid submitted gene expression file has the following format. It is a TAB-delimited, plain text file with three columns (see the attached file for a full example). The file contains an optional head line, followed by each gene’s expression in a control sample (e.g., ControlSample) and in a treatment sample (e.g., KnockOutSample).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="36%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">gene_id</th>
+<th class="head">ControlSample</th>
+<th class="head">KnockOutSample</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>AT1G01010</td>
+<td>1.198558083</td>
+<td>2.036161827</td>
+</tr>
+<tr class="row-odd"><td>AT1G01020</td>
+<td>13.75736234</td>
+<td>13.370796</td>
+</tr>
+<tr class="row-even"><td>AT1G01030</td>
+<td>0.833779536</td>
+<td>0.203616183</td>
+</tr>
+<tr class="row-odd"><td>AT1G01040</td>
+<td>9.58846466</td>
+<td>7.126566394</td>
+</tr>
+<tr class="row-even"><td>AT1G01046</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>AT1G01050</td>
+<td>23.81482799</td>
+<td>21.10821094</td>
+</tr>
+<tr class="row-even"><td>AT1G01060</td>
+<td>0.625334652</td>
+<td>1.221697096</td>
+</tr>
+<tr class="row-odd"><td>AT1G01070</td>
+<td>1.719670292</td>
+<td>0.950208853</td>
+</tr>
+<tr class="row-even"><td>AT1G01080</td>
+<td>28.34850421</td>
+<td>25.24840665</td>
+</tr>
+<tr class="row-odd"><td>AT1G01090</td>
+<td>58.26034505</td>
+<td>42.96301455</td>
+</tr>
+<tr class="row-even"><td>AT1G01100</td>
+<td>1066.508249</td>
+<td>1308.030358</td>
+</tr>
+<tr class="row-odd"><td>AT1G01110</td>
+<td>2.709783491</td>
+<td>1.425313279</td>
+</tr>
+</tbody>
+</table>
+<p>The web application displays a table and a scatter plot given a gene expression file.</p>
+<p>The table contains a list of differentially expressed genes with the following format:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="32%" />
+<col width="27%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">gene_id</th>
+<th class="head">control_sample</th>
+<th class="head">treat_sample</th>
+<th class="head">log_2[FC]</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>AT1G01010</td>
+<td>1.198558083</td>
+<td>2.036161827</td>
+<td>0.76</td>
+</tr>
+</tbody>
+</table>
+<p>The scatter plot displays differentially expressed genes.  The X-axis is Control, and Y-axis is Treatment.
+Replace ‘Control’ and ‘Treatment’ with appropriated column names if provided in the uploaded file.  The up-regulated genes are shown in red dots, and down-regulated genes are shown in blue.</p>
+</div>
+<div class="section" id="response-time">
+<h2>2.2.4 Response time<a class="headerlink" href="#response-time" title="Permalink to this headline">¶</a></h2>
+<p>&lt;5 seconds.</p>
+</div>
+<div class="section" id="user-classes-and-characteristics">
+<h2>2.3 User classes and characteristics<a class="headerlink" href="#user-classes-and-characteristics" title="Permalink to this headline">¶</a></h2>
+<p>Our application mainly serves the people who study on the genee. Mostly they are biologists and scientists, but it doesn??t rule out some other people want to use this application to get some useful information.</p>
+</div>
+<div class="section" id="operating-environment">
+<h2>2.4 Operating environment<a class="headerlink" href="#operating-environment" title="Permalink to this headline">¶</a></h2>
+<p>Our software is a multi-functional software system based on the windows platform. It is compatible and can run on 64 - bit laptop or ordinary desktop.</p>
+</div>
+<div class="section" id="design-implementation-constraints">
+<h2>2.5Design/implementation constraints <a href="#id5"><span class="problematic" id="id6">**</span></a><a href="#id7"><span class="problematic" id="id8">*</span></a><a class="headerlink" href="#design-implementation-constraints" title="Permalink to this headline">¶</a></h2>
+<p>Our application must upload the gene file and then get the result, it seems too fussy. We must consider about the arrangement and beautification of the interface, Prioritization of processing operations and it deepens the difficulty of coding and testing. This application needs users to upload the gene file, but the result is given by the application after it analyses. Every one uploads different files, so the application must analyses a variety of documents. It will raise the error rate.</p>
+</div>
+<div class="section" id="assumptions-and-dependencies">
+<h2>2.6 Assumptions and dependencies<a class="headerlink" href="#assumptions-and-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>This application needs users to upload the file to get the information what the users want. It means it will have lots of new genes needing our updating. In other words, the people who manage the application should know about the knowledge of the genes.</p>
+</div>
+</div>
+<div class="section" id="external-interface-requirements">
+<h1>3. External Interface Requirements<a class="headerlink" href="#external-interface-requirements" title="Permalink to this headline">¶</a></h1>
+<p>3.1 User interfaces
+UI-1: It will show you a table, the first column you can input the gene_id, the second column you can input the ControlSample and the last column you can input KnockOutSample. It will show you four rows first if you want to add rows click the add key and vise versa. Or you can input the data by database. And at the end of the table it has two buttons: calculate and reset.</p>
+<p>UI-2: It will show you what you input before and the result of the calculation at the forth column.</p>
+<p>UI-3: It will show you the picture about the calculating result and give advice about the genes. And it has two buttons at the bottom of the page: save and cancel.</p>
+<p>UI-4: It will show you the list of file you saved before. And you can see the completed result in this page. And you can transfer the file to others through this page.</p>
+<div class="section" id="hardware-interfaces">
+<h2>3.2 Hardware interfaces<a class="headerlink" href="#hardware-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>The requests of the hardware for the web application are as followed:
+1. 64 bits laptop or desktop.
+2. TCP protocol.</p>
+</div>
+<div class="section" id="software-interfaces">
+<h2>3.3 Software interfaces<a class="headerlink" href="#software-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>The web application will create links between these as followed:
+1. IE browser or Microsoft-edge browser.
+2. SQL server.
+3. Windows operating system.</p>
+</div>
+<div class="section" id="communication-protocols-and-interfaces">
+<h2>3.4 Communication protocols and interfaces<a class="headerlink" href="#communication-protocols-and-interfaces" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>TCP protocol.</li>
+<li>Secure transmission and encryption techniques.</li>
+<li>Microsoft-edge browser.</li>
+<li>File transfer rate.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="system-features">
+<h1>4. System Features<a class="headerlink" href="#system-features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="system-feature-a">
+<h2>4.1 System feature A<a class="headerlink" href="#system-feature-a" title="Permalink to this headline">¶</a></h2>
+<p>Add and update are the highest priorities in this web application. Every time the users upload a new file, the application should save and update the gene list.
+Regular log records and updates are designed to better improve our software system, which is lower in comparison, so the priority is low in the software system.
+The last main user group to manage and maintain the data directly in the background is the database administrator. Although the group is not very large, its importance can not be ignored. After all, the highlight of the software system is the database, so its priority is the highest. I believe this is also the center of the application database system software.</p>
+<p>Action: There are two buttons on the web application (upload and go). Users upload a plain text file containing gene expression levels from two samples, representing two experimental conditions.
+Result: Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment.  If an invalid gene expression is given, the web application returns a page informing the user to provide the correct format.</p>
+<p>The software needs to draw the uploaded data to graph. The points on the graph will show the users some information, such as gene id and name.
+This web application can update the data intelligently, and save the new genes into the data base.</p>
+</div>
+</div>
+<div class="section" id="other-non-functional-requirements">
+<h1>5. Other Non-functional Requirements<a class="headerlink" href="#other-non-functional-requirements" title="Permalink to this headline">¶</a></h1>
+<p>This part will show you other non-functional requirements. It contains four parts about performance requirements, security requirements, software quality attributes and user documentation.</p>
+<div class="section" id="performance-requirements">
+<h2>5.1 Performance requirements<a class="headerlink" href="#performance-requirements" title="Permalink to this headline">¶</a></h2>
+<p>It can support large amount of calculations and the response time should in 3 seconds whether the file is large or not.
+Users can add or delete the data and the web application can save them timely. And the application can??t occupy large space.
+And the picture of the result should be clear either the points or the lines and what the coordinates present for and the correct units.</p>
+</div>
+<div class="section" id="safety-requirements">
+<h2>5.2 Safety requirements<a class="headerlink" href="#safety-requirements" title="Permalink to this headline">¶</a></h2>
+<p>The data users input or from database should be safety. And the whole file transfer to others should be security as we can encrypt it.
+And it is important to create backups because there always exit careless users. And if the application has errors, backups can decrease the loss.
+And the application should proceed the user authentication.</p>
+</div>
+<div class="section" id="security-requirements">
+<h2>5.3 Security requirements<a class="headerlink" href="#security-requirements" title="Permalink to this headline">¶</a></h2>
+<p>First, the web application should be easy to understand and operate.
+Second, it’s easy to modify the file and check the file.
+Finally, it can be used in many different machines.</p>
+</div>
+<div class="section" id="software-quality-attributes">
+<h2>5.4 Software quality attributes<a class="headerlink" href="#software-quality-attributes" title="Permalink to this headline">¶</a></h2>
+<p>This part will contain two requests of the user documentation:
+1. User??s manual: electronic document.
+2. Tutorial: electronic document.</p>
+</div>
+</div>
+<div class="section" id="other-requirements">
+<h1>6. Other Requirements<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="appendix-a-terminology-glossary-definitions-list">
+<h2>Appendix A: Terminology/Glossary/Definitions list<a class="headerlink" href="#appendix-a-terminology-glossary-definitions-list" title="Permalink to this headline">¶</a></h2>
+<p><em>Control sample</em> - a cell sample prepared in its normal condition.
+<em>Treatment sample</em> - a cell sample treated by special chemicals, or in which some genes are altered.
+<em>Differentially expressed genes</em> - the genes which have significantly different expression levels between two samples.
+<em>Up-regulation</em> - a gene is said to be up-regulated if it has higher expression in treatment than in control.
+<em>logFC</em> - log fold change of gene expression. log_2 [T/C], where T is the gene expression level from a treatment sample, while C is the gene expression level from a control sample.
+<em>the Flask framework</em> - Flask is a lightweight Web application framework written in Python. The WSGI toolbox uses Werkzeug, and the template engine uses Jinja2. Flask uses BSD authorization.
+Flask is also known as “micro-framework” because it uses simple core and uses extension to add other functions. Flask has no default database and form validation tools.
+<em>Transmission Control Protocol</em> - TCP provides reliable data transmission in IP environment. Its services include data flow transmission, reliability, effective flow control, full duplex operation and multiplexing. Sending through connection oriented, end-to-end and reliable packets</p>
+</div>
+<div class="section" id="appendix-b-to-be-determined">
+<h2>Appendix B: To be determined<a class="headerlink" href="#appendix-b-to-be-determined" title="Permalink to this headline">¶</a></h2>
+<p>Due to the limitations of personal level, we know little about the technology of information security. If there is time to finish in the later stage, the message encryption technology will be added.</p>
 </div>
 </div>
 
