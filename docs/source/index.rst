@@ -15,6 +15,11 @@ Welcome to SRS(Oh My Genes)'s documentation!
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
+* :ref:`1. Introduction`
+* :ref:`1.1 Purpose`
+* :ref:`1.2 Document conventions`
+* :ref:`search`
+* :ref:`search`
+* :ref:`search`
+* :ref:`search`
 * :ref:`search`
