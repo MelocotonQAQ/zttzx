@@ -19,8 +19,6 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-:duref:'ref<sections>'
-===============
 1. Introduction
 ===============
 --------------
